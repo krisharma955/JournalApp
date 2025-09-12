@@ -22,15 +22,6 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-//    @GetMapping
-//    public ResponseEntity<?> getAllUsers() {
-//        List<User> allUsers = userService.getAll();
-//        if(allUsers != null && !allUsers.isEmpty()) {
-//            return new ResponseEntity<>(allUsers, HttpStatus.OK);
-//        }
-//        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-//    }
-
     @PutMapping
     public ResponseEntity<?> updateUser(@RequestBody User user) {
         try {
