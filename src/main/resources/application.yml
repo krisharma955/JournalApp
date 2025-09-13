@@ -1,0 +1,12 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://krisharma_955:Krish955%40MongoDB@cluster0.ferf2cu.mongodb.net/journaldb?retryWrites=true&w=majority&ssl=true
+      database: journaldb
+      auto-index-creation: true
+
+  application:
+    name: journalApp
+
+  main:
+    allow-circular-references: true
