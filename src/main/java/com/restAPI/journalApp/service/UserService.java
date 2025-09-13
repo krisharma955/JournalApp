@@ -1,6 +1,5 @@
 package com.restAPI.journalApp.service;
 
-import com.restAPI.journalApp.entity.JournalEntry;
 import com.restAPI.journalApp.entity.User;
 import com.restAPI.journalApp.repository.JournalEntryRepository;
 import com.restAPI.journalApp.repository.UserRepository;
@@ -25,14 +24,13 @@ public class UserService {
 
     private static final PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
-    public void saveEntry(User user) {
+    public void saveNewUser(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         user.setRoles(Arrays.asList("USER"));
         userRepository.save(user);
     }
 
-    public void saveNewUser(User user) {
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
+    public void saveUser(User user) {
         userRepository.save(user);
     }
 
